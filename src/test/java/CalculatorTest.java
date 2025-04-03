@@ -11,28 +11,28 @@ class CalculatorTest {  // Remove 'public' (JUnit 5 does not require public clas
     }
 
     @Test
-    void fourMinusFourEqualsZero(){
-        Calculator calculator=new Calculator();
-        assertEquals(0,calculator.sub(4,4));
+    void fourMinusFourEqualsZero() {
+        Calculator calculator = new Calculator();
+        assertEquals(0, calculator.sub(4, 4));
     }
 
     @Test
-    void fourMultiplyFourEqualsSixTeen(){
-        Calculator calculator=new Calculator();
-        assertEquals(16,calculator.multiply(4,4));
+    void fourMultiplyFourEqualsSixTeen() {
+        Calculator calculator = new Calculator();
+        assertEquals(16, calculator.multiply(4, 4));
     }
 
     @Test
-    void eightDivideByFourEqaulsTwo(){
-        Calculator calculator=new Calculator();
-        assertEquals(2,calculator.division(8,4));
+    void eightDivideByFourEqaulsTwo() {
+        Calculator calculator = new Calculator();
+        assertEquals(2, calculator.division(8, 4));
     }
 
     @Test
-    void canNotDivideByZero(){
-        Calculator calculator=new Calculator();
-        assertThrows(ArithmeticException.class,()->{
-            calculator.division(4,0);
+    void canNotDivideByZero() {
+        Calculator calculator = new Calculator();
+        assertThrows(ArithmeticException.class, () -> {
+            calculator.division(4, 0);
         });
     }
 }
