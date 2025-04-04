@@ -6,14 +6,18 @@ public class UserRegistration {
     private static String email;
     private static String password;
 
-    public static boolean registerUser(String name,String mail,String pass){
+    public static boolean registerUser(String name,String mail,String pass) throws IllegalAccessException{
         boolean addUserName=setUserName(name);
         boolean addPassword=setPassword(pass);
         boolean setMail=setEmail(mail);
         System.out.println(addUserName);
         System.out.println(addPassword);
         System.out.println(setMail);
-        return addPassword && addUserName && setMail;
+        boolean ans= addPassword && addUserName && setMail;
+        if(ans){
+            return ans;
+        }
+        throw new IllegalAccessException("Invalid credentials");
     }
 
     private static boolean setEmail(String mail) {
